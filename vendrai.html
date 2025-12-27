@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposta Comercial - VENDRAI MVP</title>
+    <title>VENDRAI - Proposta de Parceria</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
         * {
             margin: 0;
@@ -14,431 +14,128 @@
             box-sizing: border-box;
         }
 
-        @media print {
-            * {
-                page-break-inside: avoid !important;
-                break-inside: avoid !important;
-            }
-
-            .container {
-                box-shadow: none !important;
-            }
-
-            body {
-                padding: 0 !important;
-                background: white !important;
-            }
-        }
-
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #1a1a2e;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 40px 20px;
         }
 
         .container {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 600px;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.12);
+            border-radius: 24px;
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
             overflow: hidden;
         }
 
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 50px 40px;
+            padding: 40px;
             text-align: center;
             color: white;
-            position: relative;
-        }
-
-        .header::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            margin-top: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .content {
-            padding: 60px 50px;
-        }
-
-        .section {
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #667eea;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .section-title::before {
-            content: '';
-            width: 4px;
-            height: 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
-        }
-
-        .intro-text {
-            font-size: 1.05rem;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-
-        .scope-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .scope-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
-            border: 1px solid #e9ecef;
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .scope-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
-            border-color: #667eea;
-        }
-
-        .scope-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .scope-card h4 {
-            font-size: 1rem;
-            color: #1a1a2e;
+            font-size: 2rem;
             margin-bottom: 8px;
         }
 
-        .scope-card p {
-            font-size: 0.85rem;
-            color: #666;
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
         }
 
-        .options-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-bottom: 30px;
+        .content {
+            padding: 40px;
         }
 
-        .option-card {
-            border-radius: 20px;
-            padding: 35px;
-            position: relative;
-            overflow: hidden;
+        .section {
+            margin-bottom: 35px;
         }
 
-        .option-a {
-            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
-            border: 2px solid #e9ecef;
-        }
-
-        .option-b {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .option-b .recommended {
-            position: absolute;
-            top: 20px;
-            right: -35px;
-            background: #10b981;
-            color: white;
-            padding: 5px 40px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            transform: rotate(45deg);
-        }
-
-        .option-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .option-card .price {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .option-a .price {
+        .section h2 {
+            font-size: 1.1rem;
             color: #667eea;
-        }
-
-        .option-card .price-note {
-            font-size: 0.85rem;
-            opacity: 0.8;
-            margin-bottom: 25px;
-        }
-
-        .option-card ul {
-            list-style: none;
-            margin-bottom: 25px;
-        }
-
-        .option-card li {
-            padding: 10px 0;
-            font-size: 0.95rem;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .option-a li {
-            border-bottom: 1px solid #eee;
+        .section p {
+            color: #555;
+            line-height: 1.7;
         }
 
-        .option-b li {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .check {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-        }
-
-        .option-a .check {
-            background: #e8f5e9;
-            color: #10b981;
-        }
-
-        .option-b .check {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .costs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        .costs-table th,
-        .costs-table td {
-            padding: 15px 20px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-
-        .costs-table th {
+        .price-box {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            font-weight: 500;
-        }
-
-        .costs-table tr:hover {
-            background: #f8f9fa;
-        }
-
-        .costs-table .total {
-            font-weight: 600;
-            background: #f8f9fa;
-        }
-
-        .timeline {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
             margin: 30px 0;
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 25px;
-            left: 60px;
-            right: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            border-radius: 2px;
+        .price-box .label {
+            opacity: 0.9;
+            margin-bottom: 8px;
         }
 
-        .timeline-item {
-            text-align: center;
-            position: relative;
-            z-index: 1;
+        .price-box .price {
+            font-size: 2.5rem;
+            font-weight: 700;
         }
 
-        .timeline-item .dot {
-            width: 50px;
-            height: 50px;
-            background: white;
-            border: 3px solid #667eea;
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            color: #667eea;
-        }
-
-        .timeline-item.active .dot {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: transparent;
-        }
-
-        .timeline-item h5 {
+        .price-box .note {
+            opacity: 0.8;
+            margin-top: 8px;
             font-size: 0.9rem;
-            color: #1a1a2e;
-            margin-bottom: 5px;
         }
 
-        .timeline-item p {
-            font-size: 0.8rem;
-            color: #666;
+        .divider {
+            height: 1px;
+            background: #eee;
+            margin: 30px 0;
         }
 
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 15px;
+        .contributions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
-        .tech-badge {
-            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
-            border: 1px solid #e9ecef;
-            padding: 10px 18px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
+        .contribution-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
         }
 
-        .tech-badge:hover {
-            border-color: #667eea;
-            transform: translateY(-2px);
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            border-left: 4px solid #667eea;
-            padding: 25px;
-            border-radius: 0 12px 12px 0;
-            margin: 25px 0;
-        }
-
-        .highlight-box h4 {
-            color: #667eea;
+        .contribution-card .emoji {
+            font-size: 2rem;
             margin-bottom: 10px;
         }
 
-        .cta-section {
-            text-align: center;
-            padding: 50px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
-            border-top: 1px solid #eee;
+        .contribution-card h4 {
+            color: #333;
+            margin-bottom: 8px;
         }
 
-        .cta-section h3 {
-            font-size: 1.5rem;
-            color: #1a1a2e;
-            margin-bottom: 15px;
-        }
-
-        .cta-section p {
+        .contribution-card p {
+            font-size: 0.85rem;
             color: #666;
-            margin-bottom: 30px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #667eea;
-            font-weight: 500;
         }
 
         .footer {
             text-align: center;
             padding: 25px;
-            background: #1a1a2e;
-            color: rgba(255, 255, 255, 0.7);
+            background: #f8f9fa;
+            color: #888;
             font-size: 0.85rem;
-        }
-
-        @media (max-width: 768px) {
-
-            .scope-grid,
-            .options-container {
-                grid-template-columns: 1fr;
-            }
-
-            .content {
-                padding: 40px 25px;
-            }
-
-            .header h1 {
-                font-size: 1.8rem;
-            }
         }
     </style>
 </head>
@@ -447,267 +144,62 @@
     <div class="container">
         <div class="header">
             <h1>🚀 VENDRAI</h1>
-            <p>Proposta Comercial - MVP</p>
-            <span class="badge">📅 Dezembro 2025</span>
+            <p>Proposta de Parceria</p>
         </div>
 
         <div class="content">
-            <!-- Introdução -->
             <div class="section">
-                <div class="section-title">Sobre o Projeto</div>
-                <p class="intro-text">
-                    A <strong>VENDRAI</strong> será a primeira plataforma de Vendedor Autônomo de IA especializada em
-                    vendas B2B de atacado.
-                    Esta proposta contempla o <strong>MVP inicial</strong>: um Agente SDR inteligente que atende
-                    clientes via WhatsApp,
-                    consulta estoque em tempo real e processa pagamentos automaticamente.
+                <h2>📋 O Projeto</h2>
+                <p>
+                    Plataforma de IA para vendas B2B no atacado.
+                    Começamos com o MVP para validar com o primeiro cliente,
+                    e evoluímos juntos como sócios.
                 </p>
             </div>
 
-            <!-- MVP Básico -->
             <div class="section">
-                <div class="section-title">🚀 MVP Básico - Validação Rápida</div>
-                <p style="color: #666; margin-bottom: 20px;">O mínimo necessário para validar o conceito com o primeiro
-                    cliente:</p>
-                <div class="scope-grid">
-                    <div class="scope-card">
-                        <div class="icon">🤖</div>
-                        <h4>Agente SDR IA</h4>
-                        <p>Atendimento inteligente via WhatsApp com conversação natural</p>
-                    </div>
-                    <div class="scope-card">
-                        <div class="icon">📦</div>
-                        <h4>Catálogo de Produtos</h4>
-                        <p>Integração com Google Sheets para consulta de produtos e estoque</p>
-                    </div>
-                    <div class="scope-card">
-                        <div class="icon">�</div>
-                        <h4>Transferência Humana</h4>
-                        <p>Handoff inteligente para vendedor humano no momento do fechamento</p>
-                    </div>
-                </div>
+                <h2>🎯 MVP Inicial</h2>
+                <p>
+                    Agente SDR de IA via WhatsApp com catálogo integrado
+                    e transferência para humano no fechamento.
+                </p>
+            </div>
 
-                <div class="highlight-box">
-                    <h4>⏱️ Prazo: 1 semana</h4>
-                </div>
+            <div class="price-box">
+                <div class="label">Investimento MVP</div>
+                <div class="price">R$ 2.000</div>
+                <div class="note">Mão de obra de desenvolvimento</div>
+            </div>
 
-                <div style="max-width: 400px; margin: 0 auto;">
-                    <div class="option-card option-b" style="text-align: center;">
-                        <h3>🤝 Parceria</h3>
-                        <div class="price">R$ 2.000</div>
-                        <div class="price-note">Mão de obra MVP + Sociedade</div>
-                        <ul style="text-align: left;">
-                            <li><span class="check">✓</span> Agente SDR conversacional</li>
-                            <li><span class="check">✓</span> Catálogo integrado (Sheets)</li>
-                            <li><span class="check">✓</span> Transferência para humano</li>
-                            <li><span class="check">✓</span> Suporte contínuo incluso</li>
-                            <li><span class="check">✓</span> Evolução do produto</li>
-                        </ul>
-                        <div
-                            style="font-size: 0.9rem; opacity: 0.9; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px;">
-                            <strong>Valores futuros alinhados após validação</strong>
-                        </div>
+            <div class="divider"></div>
+
+            <div class="section">
+                <h2>🤝 A Parceria</h2>
+                <div class="contributions">
+                    <div class="contribution-card">
+                        <div class="emoji">💰</div>
+                        <h4>Investidor</h4>
+                        <p>Capital, prospecção e comercial</p>
+                    </div>
+                    <div class="contribution-card">
+                        <div class="emoji">🧠</div>
+                        <h4>Técnico</h4>
+                        <p>Desenvolvimento, IA e evolução do produto</p>
                     </div>
                 </div>
             </div>
 
-            <!-- MVP Completo -->
             <div class="section">
-                <div class="section-title">⚡ MVP Completo - Com Pagamentos</div>
-                <p style="color: #666; margin-bottom: 20px;">MVP Básico + integração com gateway de pagamento para
-                    fechamento automático:</p>
-                <div class="scope-grid">
-                    <div class="scope-card">
-                        <div class="icon">🤖</div>
-                        <h4>Agente SDR IA</h4>
-                        <p>Atendimento inteligente via WhatsApp com conversação natural</p>
-                    </div>
-                    <div class="scope-card">
-                        <div class="icon">📦</div>
-                        <h4>Catálogo + Estoque</h4>
-                        <p>Consulta e atualização de estoque em tempo real</p>
-                    </div>
-                    <div class="scope-card">
-                        <div class="icon">💳</div>
-                        <h4>Gateway de Pagamento</h4>
-                        <p>Integração com Asaas (PIX, boleto, cartão)</p>
-                    </div>
-                </div>
-
-                <div class="highlight-box">
-                    <h4>⏱️ Prazo: 2 semanas</h4>
-                </div>
-
-                <div style="max-width: 400px; margin: 0 auto;">
-                    <div class="option-card option-b" style="text-align: center;">
-                        <h3>🤝 Parceria</h3>
-                        <div class="price">A definir</div>
-                        <div class="price-note">Após validação do MVP</div>
-                        <ul style="text-align: left;">
-                            <li><span class="check">✓</span> Tudo do MVP Básico</li>
-                            <li><span class="check">✓</span> Gateway de pagamento (Asaas)</li>
-                            <li><span class="check">✓</span> Fechamento automático</li>
-                            <li><span class="check">✓</span> Suporte contínuo incluso</li>
-                        </ul>
-                        <div
-                            style="font-size: 0.9rem; opacity: 0.9; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px;">
-                            <strong>Valores alinhados entre parceiros</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Custos Operacionais -->
-            <div class="section">
-                <div class="section-title">Custos Operacionais Mensais</div>
-                <p style="color: #666; margin-bottom: 15px;">Custos de infraestrutura que ficam a cargo do projeto (não
-                    inclusos na implementação):</p>
-                <table class="costs-table">
-                    <thead>
-                        <tr>
-                            <th>Serviço</th>
-                            <th>Função</th>
-                            <th>Custo Estimado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>🗄️ Supabase</td>
-                            <td>Banco de dados + Autenticação</td>
-                            <td>$25 - $50/mês</td>
-                        </tr>
-                        <tr>
-                            <td>⚙️ n8n Cloud</td>
-                            <td>Orquestração de automações</td>
-                            <td>$24 - $50/mês</td>
-                        </tr>
-                        <tr>
-                            <td>📱 Evolution API</td>
-                            <td>WhatsApp Business API</td>
-                            <td>$20 - $40/mês</td>
-                        </tr>
-                        <tr>
-                            <td>🧠 OpenAI API</td>
-                            <td>Inteligência do Agente (GPT)</td>
-                            <td>$30 - $80/mês*</td>
-                        </tr>
-                        <tr>
-                            <td>� Digital Ocean</td>
-                            <td>VPS / Servidor</td>
-                            <td>$12 - $24/mês</td>
-                        </tr>
-                        <tr>
-                            <td>�💳 Asaas</td>
-                            <td>Gateway de pagamentos</td>
-                            <td>Taxa por transação (~2.5%)</td>
-                        </tr>
-                        <tr class="total">
-                            <td colspan="2"><strong>Total Estimado</strong></td>
-                            <td><strong>R$ 400 - 700/mês</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">*Custo de OpenAI varia conforme volume de
-                    conversas</p>
-            </div>
-
-            <!-- Stack Técnica -->
-            <div class="section">
-                <div class="section-title">Stack Técnica</div>
-                <div class="tech-stack">
-                    <span class="tech-badge">🤖 GPT-4o-mini</span>
-                    <span class="tech-badge">⚙️ n8n</span>
-                    <span class="tech-badge">🗄️ Supabase</span>
-                    <span class="tech-badge">📱 Evolution API</span>
-                    <span class="tech-badge">📊 Google Sheets</span>
-                    <span class="tech-badge">💳 Asaas</span>
-                    <span class="tech-badge">🔍 RAG/Embeddings</span>
-                </div>
-            </div>
-
-            <!-- Timeline -->
-            <div class="section">
-                <div class="section-title">Cronograma MVP</div>
-                <div class="timeline">
-                    <div class="timeline-item active">
-                        <div class="dot">1</div>
-                        <h5>Semana 1</h5>
-                        <p>Setup + Agente IA</p>
-                    </div>
-                    <div class="timeline-item active">
-                        <div class="dot">2</div>
-                        <h5>Semana 2</h5>
-                        <p>Integrações + Testes</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="dot">3</div>
-                        <h5>Semana 3</h5>
-                        <p>Go-live + Ajustes</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Próximas Fases -->
-            <div class="section">
-                <div class="section-title">Roadmap - Fases Futuras</div>
-                <p style="color: #666; margin-bottom: 20px;">Após validação do MVP, as próximas evoluções incluem:</p>
-                <table class="costs-table">
-                    <thead>
-                        <tr>
-                            <th>Fase</th>
-                            <th>Funcionalidades</th>
-                            <th>Prazo</th>
-                            <th>Opção A (Fee)</th>
-                            <th>Opção B (Sociedade)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Fase 2</strong></td>
-                            <td>Dashboard + Catálogo Inteligente + Interface para cliente criar agente</td>
-                            <td>+4-6 semanas</td>
-                            <td>R$ 8.000 - 12.000</td>
-                            <td>R$ 4.000 - 6.000</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Fase 3</strong></td>
-                            <td>Agente de Prospecção + Follow-up automático + Recuperação de carrinho</td>
-                            <td>+4 semanas</td>
-                            <td>R$ 6.000 - 8.000</td>
-                            <td>R$ 3.000 - 4.000</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Fase 4</strong></td>
-                            <td>Omnichannel (Instagram, FB, ML) + Múltiplos ERPs + Coach IA</td>
-                            <td>+4-6 semanas</td>
-                            <td>R$ 10.000 - 15.000</td>
-                            <td>R$ 5.000 - 8.000</td>
-                        </tr>
-                        <tr class="total">
-                            <td colspan="3"><strong>Projeto Completo (MVP + Fases 2, 3 e 4)</strong></td>
-                            <td><strong>R$ 29.000 - 42.000</strong></td>
-                            <td><strong>R$ 14.500 - 21.500</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">*Na Opção B (Sociedade), os valores
-                    reduzidos são compensados pela participação societária</p>
-            </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="cta-section">
-            <h3>Vamos construir a VENDRAI juntos?</h3>
-            <div class="contact-info">
-                <a href="https://wa.me/5511985587684" target="_blank" class="contact-item"
-                    style="text-decoration: none;">
-                    � WhatsApp: (11) 98558-7684
-                </a>
+                <h2>📈 Próximos Passos</h2>
+                <p>
+                    Após validação do MVP, alinhamos os termos da sociedade
+                    e seguimos evoluindo o produto juntos.
+                </p>
             </div>
         </div>
 
         <div class="footer">
-            Isaac Silveira - Especialista em Agentes de IA
+            Isaac Silveira • Dezembro 2025
         </div>
     </div>
 </body>
